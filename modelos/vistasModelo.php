@@ -2,7 +2,7 @@
     class vistasmodelo{
 
     // ===================== Modelo para obtener vistas =====================
-        protected static function obtener_Vistas_Modelo($vista){
+        protected static function obtenerVistasModelo($vista){
             $listaVistas = [];
             if(in_array($vista, $listaVistas)){
                 if(is_file("./vistas/contenidos/".$vista."-app.php")){
