@@ -5,3 +5,7 @@
     rel="stylesheet">
 <!-- Custom styles for this template-->
 <link href="<?php echo _SERVERURL; ?>vistas/css/sb-admin-2.min.css" rel="stylesheet">
+
+<!-- Sweet Alert V8.13.0 -->
+<link href="<?php echo _SERVERURL; ?>vistas/css/sweetalert2.min.css" rel="stylesheet">
+<script src="<?php echo _SERVERURL; ?>vistas/js/sweetalert2.min.js"></script>
