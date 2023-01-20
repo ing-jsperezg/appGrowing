@@ -13,3 +13,4 @@
 <!-- Page level custom scripts -->
 <script src="<?php echo _SERVERURL; ?>vistas/js/demo/chart-area-demo.js"></script>
 <script src="<?php echo _SERVERURL; ?>vistas/js/demo/chart-pie-demo.js"></script>
+<script src="<?php echo _SERVERURL; ?>vistas/js/alertas.js"></script>
