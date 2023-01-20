@@ -48,4 +48,60 @@
             }
             return $letra."-".$numero;  
         }
+
+        // ===================== Limpiar cadenas =====================
+        protected static function lipiarCadena($cadena){
+            $cadena = trim($cadena);
+            $cadena = stripcslashes($cadena);
+            $cadena = str_ireplace("<script>","",$cadena);
+            $cadena = str_ireplace("<script scr=","",$cadena);
+            $cadena = str_ireplace("</script>","",$cadena);
+            $cadena = str_ireplace("<script type=","",$cadena);
+            $cadena = str_ireplace("SELECT * FROM","",$cadena);
+            $cadena = str_ireplace("DELETE FROM","",$cadena);
+            $cadena = str_ireplace("DELETE","",$cadena);
+            $cadena = str_ireplace("INSERT INTO","",$cadena);
+            $cadena = str_ireplace("UPDATE","",$cadena);
+            $cadena = str_ireplace("DROP TABLE","",$cadena);
+            $cadena = str_ireplace("DROP DATABASE","",$cadena);
+            $cadena = str_ireplace("TRUNCATE TABLE","",$cadena);
+            $cadena = str_ireplace("SHOW TABLES","",$cadena);
+            $cadena = str_ireplace("SHOW DATABASE","",$cadena);
+            $cadena = str_ireplace("<?php","",$cadena);
+            $cadena = str_ireplace("?>","",$cadena);
+            $cadena = str_ireplace("--","",$cadena);
+            $cadena = str_ireplace(">","",$cadena);
+            $cadena = str_ireplace("<","",$cadena);
+            $cadena = str_ireplace("[","",$cadena); 
+            $cadena = str_ireplace("]","",$cadena);
+            $cadena = str_ireplace("^","",$cadena); 
+            $cadena = str_ireplace("==","",$cadena);
+            $cadena = str_ireplace(";","",$cadena); 
+            $cadena = str_ireplace("::","",$cadena);
+            $cadena = stripcslashes($cadena);
+            $cadena = trim($cadena);
+
+            return $cadena;
+        }
+
+        // ===================== Validar contenido de campos =====================
+        protected static function verificarDato($filtro, $cadena){
+            if(preg_match("/^".$filtro."$/", $cadena)){
+                return false;
+            }else{
+                return true;
+            }
+        }
+
+        // ===================== Validar fechas =====================
+        protected static function verificarFecha($fecha){
+            //entra dd/mm/aaaa checkdate(mm, dd, aaaa)
+            $valores = explode("/", $fecha);
+                                                
+            if(count($valores) == 3 && checkdate($valores[1],$valores[0],$valores[2])){
+                return false;
+            }else{
+                return true;
+            }
+        }
     }
