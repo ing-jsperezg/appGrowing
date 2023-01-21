@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+<?php
+
+echo "Esta es la plantilla";
+=======
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -77,4 +82,10 @@
     <!-- JavaScript-->
     <?php include "./vistas/inc/JavaScript.php"; ?>
 </body>
+<<<<<<< HEAD
+
 </html>
+>>>>>>> feature/estructura
+=======
+</html>
+>>>>>>> feature/estructura
