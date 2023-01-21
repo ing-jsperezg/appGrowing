@@ -50,7 +50,7 @@
         }
 
         // ===================== Limpiar cadenas =====================
-        protected static function lipiarCadena($cadena){
+        protected static function limpiarCadena($cadena){
             $cadena = trim($cadena);
             $cadena = stripcslashes($cadena);
             $cadena = str_ireplace("<script>","",$cadena);
